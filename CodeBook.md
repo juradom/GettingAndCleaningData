@@ -1,9 +1,7 @@
----
+
 title: "CodeBook for Coursera Getting & Cleaning Course Project"
 author: "M Jurado"
 date: "November 22, 2014"
-output: html_document
----
 
 Note: The information for this code book was based on the contents of features_info.txt from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
