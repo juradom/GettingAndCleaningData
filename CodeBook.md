@@ -1,7 +1,10 @@
+=================================================================
 
-title: "CodeBook for Coursera Getting & Cleaning Course Project"
-author: "M Jurado"
-date: "November 22, 2014"
+COURSERA: Getting And Cleaning Data Course Project
+CodeBook.md
+Version 1.0
+
+=================================================================
 
 Note: The information for this code book was based on the contents of features_info.txt from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -9,9 +12,7 @@ Modifications have been made to the original document for clarity purposes.
 
 For more information see: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-
-Feature Selection 
-=================
+## Feature Selection
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 

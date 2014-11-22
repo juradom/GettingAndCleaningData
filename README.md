@@ -2,7 +2,7 @@
 =================================================================
 
 COURSERA: Getting And Cleaning Data Course Project
-
+README.md
 Version 1.0
 
 =================================================================
@@ -67,6 +67,13 @@ General processing:
 
 13. Create "second independent set.  Group the single dataset (group.subject.activity) and apply an average of each variable for each activity and each subject
 
-14. Write out the dataset to a text file called: AvgHumanActivityData.txt. 
+14. Write out the dataset to a text file called: AvgHumanActivityData.txt. Note: This dataset is a WIDE tidy text file format which meets the principles of:
+
+- Each variable forms a column.
+- Each observation forms a row.
+- Each type of observational unit forms a table.
+
+Source: http://vita.had.co.nz/papers/tidy-data.pdf
+
 
 M Jurado - November 2014
