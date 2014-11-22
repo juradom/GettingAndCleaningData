@@ -52,7 +52,7 @@ General processing:
 11. Remove any columns that do not contain "mean" or "std" in their column names.  Note: Derived columns from "mean" or "std" columns are not included. Also, the subjectId, activityId,and activityName columns are perserved for grouping and clarity purposes
 12. At this point you have the "initial" dataset required (filterMergedYX)
 14. Create "second independent set.  Group the single dataset (group.subject.activity) and apply an average of each variable for each activity and each subject
-15. Write out the dataset to a text file. 
+15. Write out the dataset to a text file called: AvgHumanActivityData.txt. 
 
 
 M Jurado - November 2014
