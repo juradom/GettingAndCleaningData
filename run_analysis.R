@@ -16,7 +16,7 @@ library(plyr)
     subject_test <- read.table("./test/subject_test.txt", quote="\"")
     y_test <- read.table("./test/y_test.txt", quote="\"")
 
-## Since MERGE resorts columns, add a sort column 
+## Since MERGE re-sorts columns, add a sort column 
     ## to y_test and y_train to re-sort after MERGE
     y_test$sortCol <- (1:nrow(y_test))
     y_train$sortCol <- (1:nrow(y_train))
@@ -43,8 +43,16 @@ library(plyr)
     subject_train <- rename(subject_train, replace = c("V1" = "subjectId"))
 
     ## set "X" dataset column names 
+    # Make feature names more readable
+
+    features$V2 <- sub("-mean()-",".Mean.", features$V2, fixed=TRUE)
+    features$V2 <- sub("-std()-",".Std.", features$V2, fixed=TRUE)
+    features$V2 <- sub("tBody","Time.Body.", features$V2, fixed=TRUE)
+    features$V2 <- sub("tGravity","Time.Gravity.", features$V2, fixed=TRUE)
+    features$V2 <- sub("fBody","Frequency.Body.", features$V2, fixed=TRUE)
+    features$V2 <- sub("Acc","Acceleration", features$V2, fixed=TRUE)
+
     ## Loop through the features dataset and apply row attributes to the "X" dataset column names
-    
     for (n in 1:nrow(features)){
         colnames(X_test)[n] <- as.character(features[n,2])
         colnames(X_train)[n] <- as.character(features[n,2])
