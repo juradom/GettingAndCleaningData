@@ -1,8 +1,7 @@
 ---
-output:
-  html_document:
-    keep_md: yes
+output: html_document
 ---
+
 =================================================================
 
 COURSERA: Getting And Cleaning Data Course Project
