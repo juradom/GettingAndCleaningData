@@ -51,13 +51,7 @@ General processing:
 10. Merge the training and the test sets to create one data set.
 11. Remove any columns that do not contain "mean" or "std" in their column names.  Note: Derived columns from "mean" or "std" columns are not included. Also, the subjectId, activityId,and activityName columns are perserved for grouping and clarity purposes
 12. At this point you have the "initial" dataset required (filterMergedYX)
-<<<<<<< HEAD
-14. Create "second independent set.  Group the single dataset (group.subject.activity) and apply an average of each variable for each activity and each subject
-15. Write out the dataset to a text file called: AvgHumanActivityData.txt. 
-=======
 13. Create "second independent set.  Group the single dataset (group.subject.activity) and apply an average of each variable for each activity and each subject
-14. Write out the dataset to a text file. 
->>>>>>> 064adabf48ffce52657a32ea306a63c019b81116
-
+14. Write out the dataset to a text file called: AvgHumanActivityData.txt. 
 
 M Jurado - November 2014
