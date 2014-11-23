@@ -1,6 +1,9 @@
 library(data.table)
 library(plyr)
 
+# reset working directory
+setwd("~/Documents/Coursera/Getting & Cleaning Data/GettingAndCleaningData")
+
 ## download file and unzip file; set working directory
     download.file("http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "./run_analysis.zip")
     unzip("./run_analysis.zip")
@@ -58,6 +61,13 @@ library(plyr)
     features$V2 <- sub("fBody","Average.Of.Frequency.Body.", features$V2, fixed=TRUE)
     features$V2 <- sub("angle","Average.Of.Angle.", features$V2, fixed=TRUE)
     features$V2 <- sub("Acc","Acceleration", features$V2, fixed=TRUE)
+    features$V2 <- sub("(Average.Of.","", features$V2, fixed=TRUE)
+    features$V2 <- sub("(X","X", features$V2, fixed=TRUE)
+    features$V2 <- sub("(Y","Y", features$V2, fixed=TRUE)
+    features$V2 <- sub("(Z","Z", features$V2, fixed=TRUE)
+    features$V2 <- sub("Mean)",".Mean", features$V2, fixed=TRUE)
+    #features$V2 <- sub("gravityMean","", features$V2, fixed=TRUE)
+
 
     ## Loop through the features dataset and apply row attributes to the "X" dataset column names
     for (n in 1:nrow(features)){
@@ -132,8 +142,5 @@ meanSubset <-  subset(mergedYX, select=meanStdColList)
 
 # Write out tidy mergedYX data to table
 write.table(group.subject.activity, file="./AvgHumanActivityData.txt", row.names=FALSE)
-
-# reset working directory
-setwd("~/Documents/Coursera/Getting & Cleaning Data/GettingAndCleaningData")
 
 
