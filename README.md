@@ -61,7 +61,7 @@ General processing:
 
 10. Merge the training and the test sets to create one data set.
 
-11. Remove any columns that do not contain "mean" or "std" in their column names.  Note: Derived columns from "mean" or "std" columns are not included. Also, the subjectId, activityId,and activityName columns are perserved for grouping and clarity purposes
+11. Remove any columns that do not contain "mean" or "std" in their column names.  Note: the subjectId, activityId,and activityName columns were created/preserved for grouping and clarity purposes
 
 12. At this point you have the "initial" dataset required (filterMergedYX)
 

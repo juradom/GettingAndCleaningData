@@ -97,7 +97,7 @@ library(plyr)
 #--Extracts only the measurements on the mean and standard deviation for each measurement. 
 # NOTE: EXCLUDES derived columns using mean/std e.g "angle" columns
 for (n in 4:ncol(mergedYX)){
-    if (colnames(mergedYX[n]) %like% "mean" | colnames(mergedYX[n]) %like% "std" )
+    if (colnames(mergedYX[n]) %like% "Mean" | colnames(mergedYX[n]) %like% "Std" )
         meanStdColList <- c(meanStdColList, colnames(mergedYX[n]))
 }
 
@@ -132,6 +132,7 @@ meanSubset <-  subset(mergedYX, select=meanStdColList)
 # Write out tidy mergedYX data to table
 write.table(group.subject.activity, file="./AvgHumanActivityData.txt", row.names=FALSE)
 
-
+# reset working directory
+setwd("~/Documents/Coursera/Getting & Cleaning Data/GettingAndCleaningData")
 
 
