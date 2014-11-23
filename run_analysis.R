@@ -53,9 +53,10 @@ library(plyr)
     features$V2 <- sub("-Z",".Z", features$V2, fixed=TRUE)
     features$V2 <- sub("-std()-",".Std.", features$V2, fixed=TRUE)
     features$V2 <- sub("-std()",".Std", features$V2, fixed=TRUE)
-    features$V2 <- sub("tBody","Time.Body.", features$V2, fixed=TRUE)
-    features$V2 <- sub("tGravity","Time.Gravity.", features$V2, fixed=TRUE)
-    features$V2 <- sub("fBody","Frequency.Body.", features$V2, fixed=TRUE)
+    features$V2 <- sub("tBody","Average.Of.Time.Body.", features$V2, fixed=TRUE)
+    features$V2 <- sub("tGravity","Average.Of.Time.Gravity.", features$V2, fixed=TRUE)
+    features$V2 <- sub("fBody","Average.Of.Frequency.Body.", features$V2, fixed=TRUE)
+    features$V2 <- sub("angle","Average.Of.Angle.", features$V2, fixed=TRUE)
     features$V2 <- sub("Acc","Acceleration", features$V2, fixed=TRUE)
 
     ## Loop through the features dataset and apply row attributes to the "X" dataset column names

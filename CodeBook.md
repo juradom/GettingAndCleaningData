@@ -52,6 +52,7 @@ The naming convention was changed such that:
 - %Acc% = Acceleration
 
 The resulting data points were converted to the following values:
+(Note: Columns 4:89 represent averages of the original metric)
 
  [1] "subjectId"                                            
  [2] "activityId"                                           
