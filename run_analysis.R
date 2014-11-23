@@ -46,7 +46,13 @@ library(plyr)
     # Make feature names more readable
 
     features$V2 <- sub("-mean()-",".Mean.", features$V2, fixed=TRUE)
+    features$V2 <- sub("-mean()",".Mean", features$V2, fixed=TRUE)
+    features$V2 <- sub("-meanFreq()",".Mean.Frequency", features$V2, fixed=TRUE)
+    features$V2 <- sub("-X",".X", features$V2, fixed=TRUE)
+    features$V2 <- sub("-Y",".Y", features$V2, fixed=TRUE)
+    features$V2 <- sub("-Z",".Z", features$V2, fixed=TRUE)
     features$V2 <- sub("-std()-",".Std.", features$V2, fixed=TRUE)
+    features$V2 <- sub("-std()",".Std", features$V2, fixed=TRUE)
     features$V2 <- sub("tBody","Time.Body.", features$V2, fixed=TRUE)
     features$V2 <- sub("tGravity","Time.Gravity.", features$V2, fixed=TRUE)
     features$V2 <- sub("fBody","Frequency.Body.", features$V2, fixed=TRUE)
@@ -124,7 +130,7 @@ meanSubset <-  subset(mergedYX, select=meanStdColList)
 
 
 # Write out tidy mergedYX data to table
-write.table(group.subject.activity, file="./AvgHumanActivityData.txt")
+write.table(group.subject.activity, file="./AvgHumanActivityData.txt", row.names=FALSE)
 
 
 
