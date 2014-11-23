@@ -66,7 +66,6 @@ setwd("~/Documents/Coursera/Getting & Cleaning Data/GettingAndCleaningData")
     features$V2 <- sub("(Y","Y", features$V2, fixed=TRUE)
     features$V2 <- sub("(Z","Z", features$V2, fixed=TRUE)
     features$V2 <- sub("Mean)",".Mean", features$V2, fixed=TRUE)
-    #features$V2 <- sub("gravityMean","", features$V2, fixed=TRUE)
 
 
     ## Loop through the features dataset and apply row attributes to the "X" dataset column names
